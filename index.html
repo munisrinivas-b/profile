@@ -202,31 +202,43 @@
                     <div style="font-size: 0.95rem; margin-bottom: 8px;">
                       <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
                     </div>
-                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
-                      <li style="margin-bottom: 8px;">
-                        Performed sensor integration and registration; collected time-synchronized multimodal data (<strong>camera</strong>, <strong>LiDAR</strong>, <strong>IMU</strong>, <strong>GPS</strong>) for algorithm evaluation.
-                      </li>
-                    </ul>
-                    <div style="text-align: center; margin: 20px 0 8px 0;">
-                      <img src="assets/img/sensor_suite_image.png"
-                           alt="Car with attached sensors"
-                           style="width: 720px; max-width: 95%; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
-                    </div>
-                    <ul style="list-style-type: disc; padding-left: 20px;">
-                      <li>Development of <b>Detect-Classify-Track pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
-                      <li>Performed object detection on 3D LiDAR point clouds using <b>DBSCAN</b> clustering and ground plane segmentation with <b>RANSAC</b>; fused classification with <b>YOLOv8</b> from camera images (via LiDAR–camera calibration).</li>
-                      <li>Tracked vehicles using an <b>EKF</b> and performed data association using <b>Mahalanobis distance</b> and <b>Hungarian algorithm</b>.</li>
-                      <div style="margin: 20px 0; text-align: center;">
-                        <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
-                          <source src="assets/videos/detect_classify_track_demo.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
-                      <li>Classification <b>accuracy of 62%</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception pipeline.</li>
-                    </ul>
-                    <div style="margin-top: 8px;">
-                      <b>Tools:</b> C++, Python, ROS, NumPy, OpenCV
+
+                    <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#perception_project">
+                        Show more
+                    </button>
+                    
+                    <!-- Expandable content -->
+                    <div class="collapse" id="perception_project">
+
+                        <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
+                        <li style="margin-bottom: 8px;">
+                            Performed sensor integration and registration; collected time-synchronized multimodal data (<strong>camera</strong>, <strong>LiDAR</strong>, <strong>IMU</strong>, <strong>GPS</strong>) for algorithm evaluation.
+                        </li>
+                        </ul>
+
+                        <div style="text-align: center; margin: 20px 0 8px 0;">
+                        <img src="assets/img/sensor_suite_image.png"
+                            alt="Car with attached sensors"
+                            style="width: 720px; max-width: 95%; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
+                        </div>
+
+                        <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Development of <b>Detect-Classify-Track pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
+                        <li>Performed object detection on 3D LiDAR point clouds using <b>DBSCAN</b> clustering and ground plane segmentation with <b>RANSAC</b>; fused classification with <b>YOLOv8</b> from camera images (via LiDAR–camera calibration).</li>
+                        <li>Tracked vehicles using an <b>EKF</b> and performed data association using <b>Mahalanobis distance</b> and <b>Hungarian algorithm</b>.</li>
+                        <div style="margin: 20px 0; text-align: center;">
+                            <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
+                            <source src="assets/videos/detect_classify_track_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
+                        <li>Classification <b>accuracy of 62%</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception pipeline.</li>
+                        </ul>
+
+                        <div style="margin-top: 8px;">
+                        <b>Tools:</b> C++, Python, ROS, NumPy, OpenCV
+                        </div>
                     </div>
                   </div>
                   
@@ -256,106 +268,108 @@
                     <div style="font-size: 0.95rem; margin-bottom: 14px;">
                     <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
                     </div>
-                
 
-                    <!-- Project Details with Inline Media -->
-                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
-                    <li>
-                        Designed a <strong>multi-hypotheses trajectory prediction framework</strong> for real-time autonomous driving scenarios.
-                        <div style="margin-top: 8px; margin-bottom: 16px;">
-                        <img src="assets/img/traj_prediction_concept.png" class="img-fluid rounded shadow-sm" alt="Trajectory Prediction Concept"
-                        style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-                        <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Overall MC-EKF Framework</p>
-                        </div>
-                    </li>
+                    <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#multihyptheses_trajectory_prediction">
+                        Show more
+                    </button>
                 
-                    <li>
-                        Implemented <strong>map-based pruning</strong> to eliminate infeasible trajectory hypotheses.
-                    </li>
+                    <div class="collapse" id="multihyptheses_trajectory_prediction">
+                        <!-- Project Details with Inline Media -->
+                        <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
+                        <li>
+                            Designed a <strong>multi-hypotheses trajectory prediction framework</strong> for real-time autonomous driving scenarios.
+                            <div style="margin-top: 8px; margin-bottom: 16px;">
+                            <img src="assets/img/traj_prediction_concept.png" class="img-fluid rounded shadow-sm" alt="Trajectory Prediction Concept"
+                            style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Overall MC-EKF Framework</p>
+                            </div>
+                        </li>
                 
-                    <li>
-                        Conducted experiments on <strong>Ackermann steering RC vehicles</strong> with sensor suite integration.
-                        <div style="margin-top: 8px; margin-bottom: 16px;">
-                        <img src="assets/img/traj_prediction_test_track_ackermann_models.png" class="img-fluid rounded shadow-sm" alt="Experimental Setup"
-                        style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-                        <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Experimental Setup with Ackermann Vehicles</p>
-                        </div>
-                    </li>
+                        <li>
+                            Implemented <strong>map-based pruning</strong> to eliminate infeasible trajectory hypotheses.
+                        </li>
                 
-                    <li>
-                        Benchmarked performance across multiple motion models; <b>CTRV</b> showed least error with <b>minADE = 0.101 m</b>.
+                        <li>
+                            Conducted experiments on <strong>Ackermann steering RC vehicles</strong> with sensor suite integration.
+                            <div style="margin-top: 8px; margin-bottom: 16px;">
+                            <img src="assets/img/traj_prediction_test_track_ackermann_models.png" class="img-fluid rounded shadow-sm" alt="Experimental Setup"
+                            style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+                            <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Experimental Setup with Ackermann Vehicles</p>
+                            </div>
+                        </li>
+                
+                        <li>
+                            Benchmarked performance across multiple motion models; <b>CTRV</b> showed least error with <b>minADE = 0.101 m</b>.
 
-                        <div style="max-width: 500px; margin: 0 auto;">
-                            <video controls style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-                              <source src="assets/videos/traj_pred_demo.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </li>
+                            <div style="max-width: 500px; margin: 0 auto;">
+                                <video controls style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                                <source src="assets/videos/traj_pred_demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </li>
                     
-                    <div class="table-responsive my-4">
-                        <h5 class="fw-bold text-center">Quantitative Results</h5>
-                        <table class="table table-bordered text-center align-middle">
-                          <thead class="table-light">
-                            <tr>
-                              <th>Motion Model</th>
-                              <th>minADE (m)</th>
-                              <th>minFDE (m)</th>
-                              <th>minADE<sub>1</sub> (m)</th>
-                              <th>minFDE<sub>1</sub> (m)</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><b>CV</b></td>
-                              <td>0.108</td>
-                              <td>0.223</td>
-                              <td>0.125</td>
-                              <td>0.232</td>
-                            </tr>
-                            <tr>
-                              <td><b>CA</b></td>
-                              <td>0.159</td>
-                              <td>0.301</td>
-                              <td>0.222</td>
-                              <td>0.334</td>
-                            </tr>
-                            <tr>
-                              <td><b>CSARA</b></td>
-                              <td>0.125</td>
-                              <td>0.194</td>
-                              <td>0.159</td>
-                              <td>0.244</td>
-                            </tr>
-                            <tr>
-                              <td><b>CTRV</b></td>
-                              <td>0.101</td>
-                              <td>0.202</td>
-                              <td>0.121</td>
-                              <td>0.237</td>
-                            </tr>
-                            <tr>
-                              <td><b>CTRA</b></td>
-                              <td>0.166</td>
-                              <td>0.250</td>
-                              <td>0.289</td>
-                              <td>0.364</td>
-                            </tr>
-                          </tbody>
-                          
-                        </table>
-                        <p class="text-muted text-center">
-                          Table: Quantitative comparison of the proposed framework using different motion models for a 3-second prediction horizon.
-                        </p>
-                      </div>
-                      
-
-
-                    </ul>
+                        <div class="table-responsive my-4">
+                            <h5 class="fw-bold text-center">Quantitative Results</h5>
+                            <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                <th>Motion Model</th>
+                                <th>minADE (m)</th>
+                                <th>minFDE (m)</th>
+                                <th>minADE<sub>1</sub> (m)</th>
+                                <th>minFDE<sub>1</sub> (m)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td><b>CV</b></td>
+                                <td>0.108</td>
+                                <td>0.223</td>
+                                <td>0.125</td>
+                                <td>0.232</td>
+                                </tr>
+                                <tr>
+                                <td><b>CA</b></td>
+                                <td>0.159</td>
+                                <td>0.301</td>
+                                <td>0.222</td>
+                                <td>0.334</td>
+                                </tr>
+                                <tr>
+                                <td><b>CSARA</b></td>
+                                <td>0.125</td>
+                                <td>0.194</td>
+                                <td>0.159</td>
+                                <td>0.244</td>
+                                </tr>
+                                <tr>
+                                <td><b>CTRV</b></td>
+                                <td>0.101</td>
+                                <td>0.202</td>
+                                <td>0.121</td>
+                                <td>0.237</td>
+                                </tr>
+                                <tr>
+                                <td><b>CTRA</b></td>
+                                <td>0.166</td>
+                                <td>0.250</td>
+                                <td>0.289</td>
+                                <td>0.364</td>
+                                </tr>
+                            </tbody>
+                            
+                            </table>
+                            <p class="text-muted text-center">
+                            Table: Quantitative comparison of the proposed framework using different motion models for a 3-second prediction horizon.
+                            </p>
+                        </div>
+                        </ul>
                 
-                    <!-- Tools Used -->
-                    <div style="font-size: 0.95rem;">
-                    <b>Tools:</b> Python, ROS, NumPy, Matplotlib, OpenCV
+                        <!-- Tools Used -->
+                        <div style="font-size: 0.95rem;">
+                        <b>Tools:</b> Python, ROS, NumPy, Matplotlib, OpenCV
+                        </div>
                     </div>
                 </div>
   
@@ -391,7 +405,7 @@
 
                     <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#lidar_classification_project">
                         Show more
-                      </button>
+                    </button>
 
                     <!-- Expandable content -->
                     <div class="collapse" id="lidar_classification_project">
@@ -611,7 +625,7 @@
                 <ul class="fa-ul mb-4">
                     <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                    Best Team Award – High Performance & Customer Satisfaction(<b>CSAT</b>)
+                    Best Team Award – High Performance & Customer Satisfaction(<b>CSAT</b>; Rated out of 5)
                     </li>
                     <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
