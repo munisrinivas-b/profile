@@ -185,7 +185,7 @@
                 <div class="resume-section-content">
                   <h2 class="mb-5">Research Experience</h2>
               
-                  <!-- Project 1 -->
+                  <!-- Perception stack for Autonmous Driving -->
                   <div class="mb-5">
                     <span id="perception_project" style="
                       font-size: 1.3rem;
@@ -233,8 +233,140 @@
                   <!-- <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;"> -->
                   <hr style="border: none; border-top: 2px solid #bbb; margin: 40px 0;">
 
-                  <!-- Project 2: LiDAR Vehicle Classification -->
-                  <!-- Project 2 -->
+
+                <!-- Project 2 : Multi Hypotheses Vehicle Trajectory prediction -->
+                <div class="mb-5">
+                    <!-- Project Title -->
+                    <span id="multihyptheses_trajectory_prediction" style="
+                        font-size: 1.3rem;
+                        font-style: italic;
+                        font-weight: 700;
+                        color: #283e63;
+                        display: block;
+                        margin-bottom: 8px;">
+                    Multi-hypotheses Trajectory Prediction of On-Road Vehicles Using Monte Carlo-Extended Kalman Filter with Map Constraints
+                    </span>
+                
+                    <!-- Role and Duration -->
+                    <div style="font-size: 1rem; color: #253045; margin-bottom: 6px;">
+                    Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Dec 2024 – Apr 2025
+                    </div>
+                
+                    <!-- Supervisors -->
+                    <div style="font-size: 0.95rem; margin-bottom: 14px;">
+                    <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
+                    </div>
+                
+
+                    <!-- Project Details with Inline Media -->
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
+                    <li>
+                        Designed a <strong>multi-hypotheses trajectory prediction framework</strong> for real-time autonomous driving scenarios.
+                        <div style="margin-top: 8px; margin-bottom: 16px;">
+                        <img src="assets/img/traj_prediction_concept.png" class="img-fluid rounded shadow-sm" alt="Trajectory Prediction Concept"
+                        style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Overall MC-EKF Framework</p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        Implemented <strong>map-based pruning</strong> to eliminate infeasible trajectory hypotheses.
+                    </li>
+                
+                    <li>
+                        Conducted experiments on <strong>Ackermann steering RC vehicles</strong> with sensor suite integration.
+                        <div style="margin-top: 8px; margin-bottom: 16px;">
+                        <img src="assets/img/traj_prediction_test_track_ackermann_models.png" class="img-fluid rounded shadow-sm" alt="Experimental Setup"
+                        style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Experimental Setup with Ackermann Vehicles</p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        Benchmarked performance across multiple motion models; <b>CTRV</b> showed least error with <b>minADE = 0.101 m</b>.
+
+                        <div style="max-width: 500px; margin: 0 auto;">
+                            <video controls style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                              <source src="assets/videos/traj_pred_demo.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </li>
+                    
+                    <div class="table-responsive my-4">
+                        <h5 class="fw-bold text-center">Quantitative Results</h5>
+                        <table class="table table-bordered text-center align-middle">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Motion Model</th>
+                              <th>minADE (m)</th>
+                              <th>minFDE (m)</th>
+                              <th>minADE<sub>1</sub> (m)</th>
+                              <th>minFDE<sub>1</sub> (m)</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><b>CV</b></td>
+                              <td>0.108</td>
+                              <td>0.223</td>
+                              <td>0.125</td>
+                              <td>0.232</td>
+                            </tr>
+                            <tr>
+                              <td><b>CA</b></td>
+                              <td>0.159</td>
+                              <td>0.301</td>
+                              <td>0.222</td>
+                              <td>0.334</td>
+                            </tr>
+                            <tr>
+                              <td><b>CSARA</b></td>
+                              <td>0.125</td>
+                              <td>0.194</td>
+                              <td>0.159</td>
+                              <td>0.244</td>
+                            </tr>
+                            <tr>
+                              <td><b>CTRV</b></td>
+                              <td>0.101</td>
+                              <td>0.202</td>
+                              <td>0.121</td>
+                              <td>0.237</td>
+                            </tr>
+                            <tr>
+                              <td><b>CTRA</b></td>
+                              <td>0.166</td>
+                              <td>0.250</td>
+                              <td>0.289</td>
+                              <td>0.364</td>
+                            </tr>
+                          </tbody>
+                          
+                        </table>
+                        <p class="text-muted text-center">
+                          Table: Quantitative comparison of the proposed framework using different motion models for a 3-second prediction horizon.
+                        </p>
+                      </div>
+                      
+
+
+                    </ul>
+                
+                    <!-- Tools Used -->
+                    <div style="font-size: 0.95rem;">
+                    <b>Tools:</b> Python, ROS, NumPy, Matplotlib, OpenCV
+                    </div>
+                </div>
+  
+                
+
+
+
+
+
+                  <hr style="border: none; border-top: 2px solid #bbb; margin: 40px 0;">
+                  <!-- Project 3: LiDAR Vehicle Classification -->
                   <div class="mb-5">
                     <!-- Project Title -->
                     <span id="lidar_classification_project" style="
@@ -249,7 +381,7 @@
                   
                     <!-- Role and Duration -->
                     <div style="font-size: 1rem; color: #253045; margin-bottom: 6px;">
-                      Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Feb 2024 – Nov 2024
+                      Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Jun 2025 – present
                     </div>
                   
                     <!-- Supervisors -->
@@ -306,12 +438,12 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forests</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
                               <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
                               <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
                             </tr>
                             <tr>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forests</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
                               <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
                               <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.87</td>
                             </tr>
