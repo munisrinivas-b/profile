@@ -154,69 +154,93 @@
             </div>
             </section> -->
             
-
             <section class="resume-section" id="research_experience">
                 <div class="resume-section-content">
                   <h2 class="mb-5">Research Experience</h2>
-                  <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                      <!-- Project Header -->
-                      <div style="margin-bottom: 12px;">
-                        <span id="perception_project" style="
-                          font-size: 1.3rem;
-                          font-style: italic;
-                          font-weight: 700;
-                          color: #283e63;
-                          display: block;
-                          margin-bottom: 4px;">
-                          Development of Perception Capabilities for Autonomous Driving Applications
-                        </span>
-                        <span style="font-size: 1rem; color: #253045;">
-                          Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Feb 2024 – Nov 2024
-                        </span>
-                        <br>
-                        <span style="font-size: 0.95rem;">
-                          <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
-                        </span>
-                      </div>
               
-                      <!-- Main Highlights -->
-                      <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
-                        <!-- First point with image below it -->
-                        <li style="margin-bottom: 8px;">
-                          Performed sensor integration and registration; collected time-synchronized multimodal data (<strong>camera</strong>, <strong>LiDAR</strong>, <strong>IMU</strong>, <strong>GPS</strong>) for algorithm evaluation.
-                        </li>
-                      </ul>
-              
-                      <!-- Large Image Under First Point -->
-                      <div style="text-align: center; margin: 20px 0 8px 0;">
-                        <img src="assets/img/sensor_suite_image.png"
-                             alt="Car with attached sensors"
-                             style="width: 720px; max-width: 95%; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
+                  <!-- Project 1 -->
+                  <div class="mb-5">
+                    <span id="perception_project" style="
+                      font-size: 1.3rem;
+                      font-style: italic;
+                      font-weight: 700;
+                      color: #283e63;
+                      display: block;
+                      margin-bottom: 4px;">
+                      Development of Perception Capabilities for Autonomous Driving Applications
+                    </span>
+                    <div style="font-size: 1rem; color: #253045; margin-top: 2px;">
+                      Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Feb 2024 – Nov 2024
+                    </div>
+                    <div style="font-size: 0.95rem; margin-bottom: 8px;">
+                      <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
+                    </div>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
+                      <li style="margin-bottom: 8px;">
+                        Performed sensor integration and registration; collected time-synchronized multimodal data (<strong>camera</strong>, <strong>LiDAR</strong>, <strong>IMU</strong>, <strong>GPS</strong>) for algorithm evaluation.
+                      </li>
+                    </ul>
+                    <div style="text-align: center; margin: 20px 0 8px 0;">
+                      <img src="assets/img/sensor_suite_image.png"
+                           alt="Car with attached sensors"
+                           style="width: 720px; max-width: 95%; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
+                    </div>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                      <li>Development of <b>Detect-Classify-Track pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
+                      <li>Performed object detection on 3D LiDAR point clouds using <b>DBSCAN</b> clustering and ground plane segmentation with <b>RANSAC</b>; fused classification with <b>YOLOv8</b> from camera images (via LiDAR–camera calibration).</li>
+                      <li>Tracked vehicles using an <b>EKF</b> and performed data association using <b>Mahalanobis distance</b> and <b>Hungarian algorithm</b>.</li>
+                      <div style="margin: 20px 0; text-align: center;">
+                        <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
+                          <source src="assets/videos/detect_classify_track_demo.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
                       </div>
+                      <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
+                      <li>Classification <b>accuracy of 62%</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception pipeline.</li>
+                    </ul>
+                    <div style="margin-top: 8px;">
+                      <b>Tools:</b> C++, Python, ROS, NumPy, OpenCV
+                    </div>
+                  </div>
               
-                      <ul style="list-style-type: disc; padding-left: 20px;">
-                        <li>Development of <b>Detect-Classify-Track pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
-                        <li>Performed object detection on 3D LiDAR point clouds using <b>DBSCAN</b> clustering and ground plane segmentation with <b>RANSAC</b>; fused classification with <b>YOLOv8</b> from camera images (via LiDAR–camera calibration).</li>
-                        <li>Tracked vehicles using an <b>EKF</b> and performed data association using <b>Mahalanobis distance</b> and <b>Hungarian algorithm</b>.</li>
-                        <!-- Embedded Demo Video (remove if unnecessary) -->
-                        <div style="margin: 20px 0; text-align: center;">
-                          <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
-                            <source src="assets/videos/detect_classify_track_demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                        <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
-                        <li>Classification <b>accuracy of 62%</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception pipeline.</li>
-                      </ul>
-                      <!-- Tools Used -->
-                      <div style="margin-top: 8px;">
-                        <b>Tools:</b> C++, Python, ROS, NumPy, OpenCV
-                      </div>
+                  <!-- Project 2 -->
+                  <div class="mb-5">
+                    <span id="lidar_classification_project" style="
+                      font-size: 1.3rem;
+                      font-style: italic;
+                      font-weight: 700;
+                      color: #283e63;
+                      display: block;
+                      margin-bottom: 4px;">
+                      Fusion of Geometric and Kinematic Features for LiDAR-Based Vehicle Classification
+                    </span>
+                    <div style="font-size: 1rem; color: #253045; margin-top: 2px;">
+                      Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Feb 2024 – Nov 2024
+                    </div>
+                    <div style="font-size: 0.95rem; margin-bottom: 8px;">
+                      <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
+                    </div>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
+                      <li>
+                        Developed a LiDAR-only classification framework by fusing geometric and kinematic features to resolve ambiguities in similar-shaped vehicles (e.g. bicycle vs. motorcycle).
+                      </li>
+                      <li>
+                        Trained Random Forest and XGBoost models with feature augmentation, achieving +4% accuracy improvement on similar classes and overall accuracy of 89% on the NuScenes dataset.
+                      </li>
+                      <li>
+                        Classes were carefully curated to emphasize challenging geometric similarities (motorcycle, bicycle, etc.).
+                      </li>
+                      <li>
+                        Ongoing work: extending to deep neural networks for kinematic feature extraction and trajectory prediction conditioned on vehicle type.
+                      </li>
+                    </ul>
+                    <div style="margin-top: 8px;">
+                      <b>Tools:</b> Python, NumPy, Pandas, Scikit-learn, XGBoost, ROS, OpenCV
                     </div>
                   </div>
                 </div>
               </section>
+              
               
 
 
