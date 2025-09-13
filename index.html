@@ -388,88 +388,98 @@
                     <div style="font-size: 0.95rem; margin-bottom: 14px;">
                       <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
                     </div>
+
+                    <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#lidar_classification_project">
+                        Show more
+                      </button>
+
+                    <!-- Expandable content -->
+                    <div class="collapse" id="lidar_classification_project">
+                        <!-- <summary style="cursor:pointer; color:#0066cc; font-weight:600; margin-bottom:12px;">
+                        ➤ Show more
+                        </summary> -->
+                        <div style="margin-top: 12px;">
                   
-                    <!-- Motivation / Project Overview -->
-                    <div style="font-style: italic; font-size: 0.95rem; color: #555; margin-bottom: 20px;">
-                        <p>
-                        Motivated by challenges in <strong>vision-based vehicle classification</strong> under adverse environmental conditions, this project leverages <strong>LiDAR’s robustness</strong> to lighting and weather(dust, smog, haze), aiming to improve distinguishing similar vehicle shapes with fused geometric and kinematic features.
-                        While <strong>cameras suffer from quality degradation</strong> in varying light, <strong>LiDAR provides reliable depth and geometry information</strong>, making it ideal for this task.
-                        <strong>RADAR</strong> provides similar features as LiDAR but at a <strong>lower cost</strong>, offers <strong>better velocity estimates</strong> of surrounding vehicles, but has <strong>reduced field of view (FoV)</strong>, which can be mitigated by using multiple RADAR sensors.
-                        </p>
-                    </div>
-                  
-                    <!-- Project Details -->
-                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
-                      <li>
-                        Developed a <strong>LiDAR-only vehicle classification framework</strong> by integrating geometric and kinematic features to resolve ambiguities between similarly shaped vehicles such as bicycles and motorcycles.
-                      </li>
-                      <li>
-                        Applied machine learning models including <strong>Random Forest</strong> and <strong>XGBoost</strong> with feature augmentation, achieving a <strong>+4% accuracy gain on challenging classes</strong> and an overall accuracy of <strong>89% on the NuScenes dataset</strong>.
-                      </li>
-                      <li>
-                        Carefully curated vehicle classes to focus on challenging geometric similarities.
-                      </li>
-                      <li>
-                        <strong>Ongoing research</strong> includes development of deep neural networks for kinematic feature extraction and trajectory prediction tailored by vehicle category.
-                      </li>
-                    </ul>
-                    
-                    <!-- confusion matrix -->
-                    <div style="text-align: center; margin: 24px 0;">
-                        <img src="assets/img/conf_mat.png" alt="Confusion Matrix for Vehicle Classification"
-                             style="width: 480px; max-width: 90%; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.15);">
-                        <div style="font-size:0.96rem; color:#666; margin-top:6px;">
-                            <em>Confusion matrix computed on real-world <strong>NuScenes</strong> dataset.</em>
+                        <!-- Motivation / Project Overview -->
+                        <div style="font-style: italic; font-size: 0.95rem; color: #555; margin-bottom: 20px;">
+                            <p>
+                            Motivated by challenges in <strong>vision-based vehicle classification</strong> under adverse environmental conditions, this project leverages <strong>LiDAR’s robustness</strong> to lighting and weather(dust, smog, haze), aiming to improve distinguishing similar vehicle shapes with fused geometric and kinematic features.
+                            While <strong>cameras suffer from quality degradation</strong> in varying light, <strong>LiDAR provides reliable depth and geometry information</strong>, making it ideal for this task.
+                            <strong>RADAR</strong> provides similar features as LiDAR but at a <strong>lower cost</strong>, offers <strong>better velocity estimates</strong> of surrounding vehicles, but has <strong>reduced field of view (FoV)</strong>, which can be mitigated by using multiple RADAR sensors.
+                            </p>
                         </div>
-                    </div>
+                  
+                        <!-- Project Details -->
+                        <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
+                        <li>
+                            Developed a <strong>LiDAR-only vehicle classification framework</strong> by integrating geometric and kinematic features to resolve ambiguities between similarly shaped vehicles such as bicycles and motorcycles.
+                        </li>
+                        <li>
+                            Applied machine learning models including <strong>Random Forest</strong> and <strong>XGBoost</strong> with feature augmentation, achieving a <strong>+4% accuracy gain on challenging classes</strong> and an overall accuracy of <strong>89% on the NuScenes dataset</strong>.
+                        </li>
+                        <li>
+                            Carefully curated vehicle classes to focus on challenging geometric similarities.
+                        </li>
+                        <li>
+                            <strong>Ongoing research</strong> includes development of deep neural networks for kinematic feature extraction and trajectory prediction tailored by vehicle category.
+                        </li>
+                        </ul>
                     
-                    <!-- Accuracy table -->
-                    <div style="font-size:0.93rem; color:#888; margin-bottom:6px;">
-                        <em>Accuracy results on the <strong>NuScenes</strong> dataset:</em>
-                      </div>
-                      <div style="overflow-x: auto; margin: 20px 0;">
-                        <table style="border-collapse: collapse; width: 100%; font-size: 0.98rem;">
-                          <thead>
-                            <tr style="background-color: #f0f4f8;">
-                              <th style="padding: 8px; border: 1px solid #ddd;">Classifier</th>
-                              <th style="padding: 8px; border: 1px solid #ddd;">Features</th>
-                              <th style="padding: 8px; border: 1px solid #ddd;">Accuracy</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
-                              <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
-                              <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.87</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
-                              <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
-                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
-                              <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.89</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                        <!-- confusion matrix -->
+                        <div style="text-align: center; margin: 24px 0;">
+                            <img src="assets/img/conf_mat.png" alt="Confusion Matrix for Vehicle Classification"
+                                style="width: 480px; max-width: 90%; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.15);">
+                            <div style="font-size:0.96rem; color:#666; margin-top:6px;">
+                                <em>Confusion matrix computed on real-world <strong>NuScenes</strong> dataset.</em>
+                            </div>
+                        </div>
+                    
+                        <!-- Accuracy table -->
+                        <div style="font-size:0.93rem; color:#888; margin-bottom:6px;">
+                            <em>Accuracy results on the <strong>NuScenes</strong> dataset:</em>
+                        </div>
+                        <div style="overflow-x: auto; margin: 20px 0;">
+                            <table style="border-collapse: collapse; width: 100%; font-size: 0.98rem;">
+                            <thead>
+                                <tr style="background-color: #f0f4f8;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">Classifier</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">Features</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.87</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.89</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
                         
                   
-                    <!-- Tools Used -->
-                    <div style="font-size: 0.95rem;">
-                      <b>Tools:</b> Python, NumPy, Pandas, Scikit-learn, XGBoost, ROS, OpenCV
+                        <!-- Tools Used -->
+                        <div style="font-size: 0.95rem;">
+                            <b>Tools:</b> Python, NumPy, Pandas, Scikit-learn, XGBoost, ROS, OpenCV
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  
-                  
-
+                
                   </div>
                 </div>
               </section>
