@@ -37,26 +37,52 @@
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Muni Srinivasulu
-                        <span class="text-primary">B</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Pursuing M.S in Autonomous Driving specialization at Indian Institute of Technology, Madras
-                        <a href="mailto:name@email.com">ed23s300@smail.iitm.ac.in</a>
-                    </div>
-                    <p class="lead mb-5"> Interested in Autonomous driving and consumer electronic products that impact and improve the lifestyle of the human race in a positive way.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/munisrinivas/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </section>
+
+
+
+        <!-- About -->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+            <h1 class="mb-0">
+                Muni Srinivasulu <span class="text-primary">B</span>
+            </h1>
+        
+            <!-- Motivation statement -->
+            <p class="lead mb-4" style="font-size: 1rem; color: #444; line-height: 1.6;">
+                Passionate about advancing autonomous driving technologies and consumer electronics that imapact the quality of life of people in a positive way.
+            </p>
+        
+            <!-- Education -->
+            <div style="font-size: 0.95rem; margin-bottom: 8px; color: #333;">
+                M.S. in Autonomous Driving, <strong>Indian Institute of Technology Madras</strong>
+            </div>
+        
+            <!-- College email -->
+            <div style="font-size: 0.95rem; margin-bottom: 4px;">
+                Academic email: 
+                <a href="mailto:ed23s300@smail.iitm.ac.in" style="text-transform: lowercase; color: #0066cc;">
+                ed23s300@smail.iitm.ac.in
+                </a>
+            </div>
+        
+            <!-- Personal email -->
+            <div style="font-size: 0.95rem; margin-bottom: 20px;">
+                Personal email: 
+                <a href="mailto:srinivasmuni23@gmail.com" style="text-transform: lowercase; color: #0066cc;">
+                srinivasmuni23@gmail.com
+                </a>
+            </div>
+        
+            <!-- Social icons -->
+            <div class="social-icons">
+                <a class="social-icon" href="https://www.linkedin.com/in/munisrinivas/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/yourgithub" title="GitHub"><i class="fab fa-github"></i></a>
+                <a class="social-icon" href="https://twitter.com/yourtwitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a class="social-icon" href="https://facebook.com/yourfacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            </div>
+        </section>
+ 
             <hr class="m-0" />
             <!-- Professional Experience-->
             <!-- <section class="resume-section" id="experience">
@@ -254,6 +280,54 @@
                         <strong>Ongoing research</strong> includes development of deep neural networks for kinematic feature extraction and trajectory prediction tailored by vehicle category.
                       </li>
                     </ul>
+                    
+                    <!-- confusion matrix -->
+                    <div style="text-align: center; margin: 24px 0;">
+                        <img src="assets/img/conf_mat.png" alt="Confusion Matrix for Vehicle Classification"
+                             style="width: 480px; max-width: 90%; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.15);">
+                        <div style="font-size:0.96rem; color:#666; margin-top:6px;">
+                            <em>Confusion matrix computed on real-world <strong>NuScenes</strong> dataset.</em>
+                        </div>
+                    </div>
+                    
+                    <!-- Accuracy table -->
+                    <div style="font-size:0.93rem; color:#888; margin-bottom:6px;">
+                        <em>Accuracy results on the <strong>NuScenes</strong> dataset:</em>
+                      </div>
+                      <div style="overflow-x: auto; margin: 20px 0;">
+                        <table style="border-collapse: collapse; width: 100%; font-size: 0.98rem;">
+                          <thead>
+                            <tr style="background-color: #f0f4f8;">
+                              <th style="padding: 8px; border: 1px solid #ddd;">Classifier</th>
+                              <th style="padding: 8px; border: 1px solid #ddd;">Features</th>
+                              <th style="padding: 8px; border: 1px solid #ddd;">Accuracy</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forests</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Random Forests</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
+                              <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.87</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
+                              <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
+                              <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.89</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                        
                   
                     <!-- Tools Used -->
                     <div style="font-size: 0.95rem;">
